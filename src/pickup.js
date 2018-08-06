@@ -31,20 +31,20 @@ export const PickupEdit = (props) => (
             <LongTextInput source="pickupAddress" />
             <LongTextInput source="pickupNote" />
             <ReferenceInput label="Messenger" source="email" reference="all_messenger">
-                <SelectInput optionText="email" />
+                <SelectInput optionText="email" optionValue="email" />
             </ReferenceInput>
         </SimpleForm>
     </Edit>
 );
 
-export const PickupCreate = (props) => (
-    <Create {...props}>
-        <SimpleForm>
-            <ReferenceInput label="User" source="userId" reference="users">
-                <SelectInput optionText="name" />
-            </ReferenceInput>
-            <TextInput source="title" />
-            <LongTextInput source="body" />
-        </SimpleForm>
-    </Create>
-);
+// export const PickupCreate = (props) => (
+//     <Create {...props}>
+//         <SimpleForm>
+//             <ReferenceInput label="User" source="userId" reference="users">
+//                 <SelectInput optionText="name" />
+//             </ReferenceInput>
+//             <TextInput source="title" />
+//             <LongTextInput source="body" />
+//         </SimpleForm>
+//     </Create>
+// );
