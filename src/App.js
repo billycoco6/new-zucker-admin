@@ -10,7 +10,8 @@ import { DeliverList, DeliverEdit } from './deliver'
 import { UserList, UserEdit, UserCreate } from './users'
 
 // const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com')
-const dataProvider = jsonServerProvider('http://localhost:5000')
+// const dataProvider = jsonServerProvider('http://localhost:5000')
+const dataProvider = jsonServerProvider('http://207.148.69.182:5000')
 const App = () => (
   <Admin title="Zucker Admin Dashboard" dataProvider={dataProvider}>
     <Resource name="all_pickup" list={PickupList} edit={PickupEdit} icon={PickupIcon} />

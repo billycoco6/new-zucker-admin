@@ -1,12 +1,14 @@
 import React from 'react'
-import { List, Edit, Create, Datagrid, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin/lib';
+import { List, Edit, Create, DateField, Datagrid, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin/lib';
 
 export const PickupList = (props) => (
     <List {...props} title="All Pickup">
         <Datagrid>
-            <TextField source="createddate" />
+            <DateField source="createddate" />
             <TextField source="owner" />
             <TextField source="orderType" />
+            <DateField source="pickupDate" />
+            <TextField source="pickupTime" />
             <TextField source="pickupCustomername" />
             <TextField source="pickupPhonenumber" />
             <TextField source="pickupAddress" />
@@ -26,9 +28,9 @@ export const PickupEdit = (props) => (
         <SimpleForm>
             <DisabledInput source="owner" />
             <DisabledInput source="orderType" />
+            <DisabledInput source="pickupAddress" />
             <TextInput source="pickupCustomername" />
             <TextInput source="pickupPhonenumber" />
-            <LongTextInput source="pickupAddress" />
             <LongTextInput source="pickupNote" />
             <ReferenceInput label="Messenger" source="email" reference="all_messenger">
                 <SelectInput optionText="email" optionValue="email" />

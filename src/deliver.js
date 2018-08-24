@@ -1,10 +1,10 @@
 import React from 'react'
-import { List, Edit, Create, Datagrid, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin/lib';
+import { List, Edit, Create, DateField, Datagrid, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput, ImageField } from 'react-admin/lib';
 
 export const DeliverList = (props) => (
     <List {...props} title="All Deliver">
         <Datagrid>
-            <TextField source="createddate" />
+            <DateField source="createddate" />
             <TextField source="owner" />
             <TextField source="orderType" />
             <TextField source="status" />
@@ -13,6 +13,8 @@ export const DeliverList = (props) => (
             <TextField source="deliverAddress" />
             <TextField source="cod" />
             <TextField source="messenger" />
+            <ImageField source="pickupSignature" />
+            <ImageField source="signature" />
             <EditButton />
         </Datagrid>
     </List>
