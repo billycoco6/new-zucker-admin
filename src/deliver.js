@@ -13,8 +13,6 @@ export const DeliverList = (props) => (
             <TextField source="deliverAddress" />
             <TextField source="cod" />
             <TextField source="messenger" />
-            <ImageField source="pickupSignature" />
-            <ImageField source="signature" />
             <EditButton />
         </Datagrid>
     </List>
@@ -29,10 +27,14 @@ export const DeliverEdit = (props) => (
         <SimpleForm>
             <DisabledInput source="owner" />
             <DisabledInput source="orderType" />
+            <p>Pickup Signature</p>
+            <ImageField source="pickupSignature" title="Pickup Signature" />
             <TextInput source="deliverCustomername" />
             <TextInput source="deliverPhonenumber" />
             <LongTextInput source="deliverAddress" />
             <LongTextInput source="cod" />
+            <p>Deliver Signature</p>
+            <ImageField source="signature" />
             <ReferenceInput label="Messenger" source="email" reference="all_messenger">
                 <SelectInput optionText="email" optionValue="email" />
             </ReferenceInput>
