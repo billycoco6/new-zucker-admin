@@ -28,11 +28,13 @@ export const DeliverEdit = (props) => (
             <DisabledInput source="owner" />
             <DisabledInput source="orderType" />
             <p>Pickup Signature</p>
-            <ImageField source="pickupSignature" title="Pickup Signature" />
+            <ImageField source="pickupSignature" />
             <TextInput source="deliverCustomername" />
             <TextInput source="deliverPhonenumber" />
             <LongTextInput source="deliverAddress" />
             <LongTextInput source="cod" />
+            <p>Package Image</p>
+            <ImageField source="packagesImg" />
             <p>Deliver Signature</p>
             <ImageField source="signature" />
             <ReferenceInput label="Messenger" source="email" reference="all_messenger">
